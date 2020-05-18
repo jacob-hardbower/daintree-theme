@@ -3,16 +3,16 @@
 	<div class="comment-content">{{comment.comment_content|wpautop}}</div>
 
 	<section class="comment-box">
-		
+
 		<!-- comment form -->
-		{% include "comment-form.twig" %}
+		{% include "sections/comment-form.twig" %}
 
 		<!-- child comments -->
 		{% if post.comments %}
 			<h4> replies </h4>
 			<div class="comments">
 				{% for cmt in comment.children %}
-					{% include "comment.twig" with {comment:cmt} %}
+					{% include "pieces/comment.twig" with {comment:cmt} %}
 				{% endfor %}
 			</div>
 		{% endif %}

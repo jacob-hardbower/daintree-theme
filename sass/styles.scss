@@ -1,3 +1,7 @@
-.egg {
-	color: blue;
-}
+// Compiles to static/css/compiled.css which is imported into style.css
+
+@import 'pages/single-password';
+
+@import 'sections/footer';
+
+@import 'pieces/menu';

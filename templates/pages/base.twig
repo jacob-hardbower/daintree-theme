@@ -1,6 +1,6 @@
 {% block html_head_container %}
 
-{% include 'html-header.twig' %}
+{% include 'pieces/html-header.twig' %}
 	{% block head %}
 	{% endblock %}
 	</head>
@@ -15,7 +15,7 @@
 						<img src="{{ TimberImage(primary_logo).src }}" alt="{{site.name}} logo">
 					</a>
 					<nav id="nav-main" class="nav-main" role="navigation">
-						{% include "menu.twig" with {'items': primary_menu.get_items, menu : primary_menu} %}
+						{% include "pieces/menu.twig" with {'items': primary_menu.get_items, menu : primary_menu} %}
 					</nav><!-- #nav -->
 				</div>
 			{% endblock %}
@@ -37,7 +37,7 @@
 
 		{% block footer %}
 			<footer id="footer">
-				{% include 'footer.twig' %}
+				{% include 'sections/footer.twig' %}
 			</footer>
 			{{ function('wp_footer') }}
 		{% endblock %}
