@@ -3,3 +3,6 @@
  * Description: A WordPress theme built on Timber
  * Author: Deleanor
 */
+
+@import "static/css/reset.css";
+@import "static/css/compiled.css";
