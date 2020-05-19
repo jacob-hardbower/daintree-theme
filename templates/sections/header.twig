@@ -1,0 +1,18 @@
+<header id="site-header" class="header site-header">
+  <div class="wrapper constrained">
+    <a class="logo-link" title="{{site.name}} homepage" href="{{site.url}}" rel="home">
+      <img src="{{ TimberImage(primary_logo).src }}" alt="{{site.name}} logo">
+    </a>
+    <button id="menu-button" class="menu-button btn btn-dark-reversed" type="button">Menu</button>
+    <div class="nav-contact-wrapper">
+      <div class="contact-header">
+        <a class="tel-number" href="tel:+17039968981">703.996.8981</a>
+        <p class="address">PO Box 2750 Ashburn, Virginia 20146</p>
+      </div>
+      <nav id="nav-main" class="nav-main constrained" role="navigation">
+        {% include "pieces/menu.twig" with {'items': menu.get_items} %}
+      </nav><!-- #nav -->
+    </div>
+    <div class="nav-background"></div>
+  </div>
+</header>
