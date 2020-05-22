@@ -1,0 +1,320 @@
+// Breakpoints used for type size changes
+$tablet-bp: '768px';
+$desktop-bp: '900px';
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 16px;
+  font-family: $body-font;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $black;
+}
+
+.light-text {
+  color: white;
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+  background-color: #eee;
+  clip: auto !important;
+  clip-path: none;
+  color: #444;
+  display: block;
+  font-size: 1em;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000; /* Above WP toolbar. */
+}
+
+%header {
+  font-family: $headline-font;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: .8em;
+  line-height: 1.1em;
+}
+%h1 {
+  font-size: 2.4rem;
+}
+%h2 {
+  font-size: 1.8rem;
+}
+%h3 {
+  font-size: 1.5rem;
+}
+%h4 {
+  font-size: 1.2rem;
+}
+%h5 {
+  font-size: 1rem;
+}
+
+@media screen and (min-width: $tablet-bp) {
+  %h1 {
+    font-size: 3.4rem;
+  }
+  %h2 {
+    font-size: 2.8rem;
+  }
+  %h3 {
+    font-size: 2.4rem;
+  }
+  %h4 {
+    font-size: 2.2rem;
+  }
+  %h5 {
+    font-size: 1.6rem;
+  }
+  %h1-tablet {
+    font-size: 3.4rem;
+  }
+  %h2-tablet {
+    font-size: 2.8rem;
+  }
+  %h3-tablet {
+    font-size: 2.4rem;
+  }
+  %h4-tablet {
+    font-size: 2.2rem;
+  }
+  %h5-tablet {
+    font-size: 1.6rem;
+  }
+  %p-tablet {
+    font-size: 1rem !important;
+  }
+  %h1-desktop {
+    font-size: 3.4rem;
+  }
+  %h2-desktop {
+    font-size: 2.8rem;
+  }
+  %h3-desktop {
+    font-size: 2.4rem;
+  }
+  %h4-desktop {
+    font-size: 2.2rem;
+  }
+  %h5-desktop {
+    font-size: 1.6rem;
+  }
+}
+
+.default-text-styling {
+
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    @extend %header;
+  }
+
+  h1,
+  .h1 {
+    @extend %h1;
+  }
+
+  .h1-tablet {
+    @extend %h1-tablet;
+  }
+
+  h2,
+  .h2 {
+   @extend %h2;
+  }
+
+  .h2-tablet {
+    @extend %h2-tablet;
+  }
+
+  h3,
+  .h3 {
+   @extend %h3;
+  }
+
+  .h3-tablet {
+    @extend %h3-tablet;
+  }
+
+  h4,
+  .h4 {
+   @extend %h4;
+  }
+
+  .h4-tablet {
+    @extend %h4-tablet;
+  }
+
+  h5,
+  .h5,
+  h6,
+  .h6 {
+   @extend %h5;
+  }
+
+  .h5-tablet {
+    @extend %h5-tablet;
+  }
+
+  .p-tablet {
+    @extend %p-tablet;
+  }
+
+  p {
+    margin-bottom: 20px;
+    line-height: 1.6em;
+  }
+
+  .h1-desktop {
+    @extend %h1-desktop;
+  }
+  .h2-desktop {
+    @extend %h2-desktop;
+  }
+  .h3-desktop {
+    @extend %h3-desktop;
+  }
+  .h4-desktop {
+    @extend %h4-desktop;
+  }
+  .h5-desktop {
+    @extend %h5-desktop;
+  }
+
+
+
+  a:not(.btn) {
+    color: $accent-dark;
+    transition: all .15s ease-in-out;
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  .light-text {
+    color: white;
+    a:not(.btn) {
+      color: white;
+      transition: all .15s ease-in-out;
+      &:hover {
+        color: white;
+        opacity: .8;
+      }
+    }
+  }
+
+  .no-top-margin {
+    margin-top: 0;
+  }
+  .no-bottom-margin {
+    margin-bottom: 0;
+  }
+
+  .wp-caption-text {
+    font-weight: 400;
+    font-size: .9em;
+    line-height: 1.5em;
+    padding-top: 8px;
+  }
+
+  blockquote {
+    font-weight: 700;
+    margin-top: 30px;
+    font-size: 1.4em;
+    padding-left: 20px;
+    p {
+      line-height: 1.6em;
+    }
+  }
+
+  cite {
+  	display: block;
+  	font-weight: 400;
+  	font-size: .6em;
+  	margin-top: 14px;
+  	line-height: .7em;
+  }
+
+  sup {
+    font-size: .5em;
+    position: relative;
+    bottom: 10px;
+    padding-left: 4px;
+  }
+  ol,
+  ul {
+    font-size: inherit;
+    margin-bottom: 1.5em;
+    list-style: none;
+  }
+
+  ol:not(.no-decoration),
+  ul:not(.no-decoration) {
+    padding-left: 22px;
+  }
+
+  ol:not(.no-decoration) { counter-reset: item; }
+  ol:not(.no-decoration) li { display: block; }
+  ol:not(.no-decoration) li::before {
+      content: counter(item) ". ";
+      counter-increment: item;
+      position: relative;
+      left: -3px;
+      color: $accent-dark;
+  }
+
+  ul:not(.no-decoration) li::before {
+    content: "⚬";
+    position: relative;
+    left: -11px;
+    top: -1px;
+    color: $accent-dark;
+  }
+
+  ol:not(.no-decoration) li {
+    margin-left: -8px;
+  }
+
+  ol li,
+  ul li {
+    line-height: 1.7em;
+    font-size: inherit;
+    margin-bottom: .8em;
+  }
+}
+
+.introductory-header {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  @media screen and (min-width: $tablet-bp) {
+    font-size: 1.4rem;
+  }
+}

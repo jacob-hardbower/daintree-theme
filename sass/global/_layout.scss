@@ -1,0 +1,86 @@
+$constrained-bp-tablet: '700px';
+$constrained-bp-desktop: '950px';
+
+html {
+  background: $light;
+}
+
+body {
+  max-width: 1700px;
+  margin: 0 auto;
+  box-shadow: 0 0 40px rgba(0,0,0,.2);
+}
+
+.constrained {
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+  @media screen and (min-width: $constrained-bp-tablet) {
+    padding: 0 40px;
+    &.slim {
+      padding: 0 20px;
+    }
+  }
+  @media screen and (min-width: $constrained-bp-desktop) {
+    padding: 0 100px;
+    &.slim {
+      padding: 0 50px;
+    }
+  }
+}
+
+.base-content {
+  background: White;
+}
+
+.article-content {
+  overflow: hidden;
+}
+
+// Use this class to prevent child elements from pushing margins outward
+.text-wrapper {
+  margin-top: -1px;
+  padding-top: 1px;
+  margin-bottom: -1px;
+  padding-bottom: 1px;
+}
+
+
+// Figures and Captions
+
+.wp-caption,
+img,
+figure {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+.wp-caption,
+.wp-caption img {
+  width: auto !important;
+}
+
+img[src=""] {
+  display: none;
+}
+
+figure {
+  margin-bottom: 20px;
+}
+
+figcaption {
+  position: relative;
+  color: $black;
+  font-family: $headline-font;
+  font-weight: 400;
+  font-size: 12px;
+  padding-left: 25px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+figcaption::before {
+  position: absolute;
+  content: "↑";
+  left: 10px;
+}

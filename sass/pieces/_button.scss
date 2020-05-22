@@ -1,0 +1,62 @@
+.btn {
+  color: white;
+  padding: 18px 12px;
+  border: 1px solid $accent-dark;
+  background: $accent-dark;
+  transition: all 0.3s ease 0s;
+  line-height: 0;
+  font-weight: 700;
+  display: inline-block;
+  font-family: $headline-font;
+  text-decoration: none;
+  background: transparent;
+  -webkit-appearance: none;
+  cursor: pointer;
+  @media screen and (min-width: 400px) {
+    padding: 20px;
+  }
+  @media screen and (min-width: 600px) {
+    padding: 25px;
+  }
+}
+
+.btn-dark {
+  color: white;
+  border: 1px solid $accent-dark;
+  background: $accent-dark;
+  &:hover {
+    background: transparent;
+    color: $accent-dark;
+  }
+}
+
+.btn-dark-reversed {
+  color: $accent-dark;
+  border: 1px solid $accent-dark;
+  background: transparent;
+  &:hover {
+    background: $accent-dark;
+    color: white;
+  }
+}
+
+.btn-accent {
+  color: $black;
+  border: 1px solid $accent;
+  background: $accent;
+  &:hover {
+    color: white;
+    background: $accent-dark;
+    border: 1px solid $accent-dark;
+  }
+}
+
+.btn-accent-reversed {
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  background: transparent;
+  &:hover {
+    color: $accent;
+    border: 1px solid $accent;
+  }
+}

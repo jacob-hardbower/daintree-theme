@@ -1,13 +1,19 @@
 // Compiles to static/css/compiled.css which is imported into style.css
 
 // Global Styles
-@import 'layout';
+@import 'global/variables';
+@import 'global/layout';
+@import 'global/typography';
 
 // Page-specific styles
 @import 'pages/single-password';
 
 // Styles for sections of a page
+@import 'sections/header';
+@import 'sections/site-banner';
 @import 'sections/footer';
 
 // Styles for pieces of a page or section
 @import 'pieces/menu';
+@import 'pieces/button';
+@import 'pieces/navigation';
