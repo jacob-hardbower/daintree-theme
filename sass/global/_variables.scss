@@ -1,11 +1,17 @@
 // Typefaces
-$headline-font: 'Work Sans'; //400, 700
-$body-font: 'Bitter'; //400, 400i, 700
+$headline-font: 'Raleway'; //400, 700
+$body-font: 'Raleway'; //400, 400i, 700
 $handwritten: 'Nothing You Could Do';
+
+$wine: #60071a;
+$pink: #8f2152;
+$tan: #efd3b6;
+$light-pink: #eaa2a2;
+$green: #474a3f;
 
 // Colors
 $black: #333;
-$accent: #5ed5a1;
-$light: #eeeeee;
-$accent-dark: #1a4f52;
-$accent-medium: #246b65;
+$accent: $green;
+$light: #f7f7f7;
+$accent-dark: $wine;
+$accent-medium: $pink;

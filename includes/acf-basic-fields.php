@@ -11,6 +11,12 @@ if( function_exists('acf_add_options_page') ) {
 	));
 
 	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Business Information',
+		'menu_title'	=> 'Business Information',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+
+	acf_add_options_sub_page(array(
 		'page_title' 	=> 'Theme Brand Settings',
 		'menu_title'	=> 'Branding',
 		'parent_slug'	=> 'theme-general-settings',
@@ -22,4 +28,11 @@ if( function_exists('acf_add_options_page') ) {
 	// 	'parent_slug'	=> 'theme-general-settings',
 	// ));
 
+}
+
+add_filter( 'timber_context', 'mytheme_timber_context'  );
+
+function mytheme_timber_context( $context ) {
+    $context['options'] = get_fields('option');
+    return $context;
 }

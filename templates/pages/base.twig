@@ -8,9 +8,9 @@
 
 <body class="{{body_class}}" data-template="pages/base.twig">
 	<a class="skip-link screen-reader-text" href="#content">{{ _e( 'Skip to content') }}</a>
-	<header class="header" >
+	<header class="header">
 		{% block header %}
-			{% include 'sections/standard-header.twig' %}
+			{% include 'sections/sidebar-header.twig' %}
 		{% endblock %}
 	</header>
 
@@ -20,16 +20,13 @@
 				Sorry, no content
 			{% endblock %}
 		</div>
-		{% if sidebar %}
-			<aside class="layout-sidebar">
-				{{sidebar}}
-			</aside>
-		{% endif %}
+
+		{% block footer %}
+			{% include 'sections/footer.twig' %}
+			{{ function('wp_footer') }}
+		{% endblock %}
+
 	</section>
 
-	{% block footer %}
-		{% include 'sections/footer.twig' %}
-		{{ function('wp_footer') }}
-	{% endblock %}
 </body>
 </html>

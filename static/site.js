@@ -1,9 +1,8 @@
 jQuery( document ).ready( function( $ ) {
 
-  // UNUSED - Stickykit - stick header to top of viewport
-  // $(".site-header").stick_in_parent();
+  // Stickykit - stick header to top of viewport
+  $(".site-header").stick_in_parent();
 
-  checkHeight();
 
   $("#menu-button").on("click", function() {
     // Swap text in the menu button to close and back
@@ -17,6 +16,11 @@ jQuery( document ).ready( function( $ ) {
     } else {
       unlockScroll();
     }
+  });
+
+  $(".menu-item-has-children").on("click", function() {
+    $(this).toggleClass("open");
+    $(this).children("ul").slideToggle(150);
   });
 
   $(document).keyup(function(e) {

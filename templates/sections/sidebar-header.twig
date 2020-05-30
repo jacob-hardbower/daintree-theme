@@ -1,0 +1,28 @@
+<header id="site-header" class="header site-header">
+  <div class="wrapper constrained">
+		<a class="logo-link" title="{{site.name}} homepage" href="{{site.url}}" rel="home">
+      <!-- <img src="{{ TimberImage(primary_logo).src }}" alt="{{site.name}} logo"> -->
+      <img src="/wp-content/themes/daintree-theme/static/img/logo-color.png" alt="{{site.name}} logo">
+    </a>
+		<a href="#" class="book-now-button btn btn-dark-reversed">Book Now</a>
+    <button id="menu-button" class="menu-button btn btn-dark-reversed" type="button">Menu</button>
+    <div class="nav-contact-wrapper">
+      <nav id="nav-main" class="nav-main" role="navigation">
+				{% set menu = primary_menu %}
+        {% include "pieces/menu.twig" with {'items': menu.get_items} %}
+      </nav>
+			<div class="contact-header">
+        <p class="phone-number"><a class="tel-number" href="tel:+1-{{ options.phone_number|replace({'(' : '' , ')' : '' , ' ' : '-'}) }}">{{ options.phone_number }}</a></p>
+        <p class="address"><a target="_blank" href="{{ options.google_directions_link }}">{{ options.address_line_one }}<br />{{ options.address_line_two }}</a></p>
+				<div class="social-links">
+					{% if options.facebook_link %}<a target="_blank" href="#"><i class="fab fa-facebook-square"></i></a>{% endif %}
+					{% if options.twitter_link %}<a target="_blank" href="#"><i class="fab fa-twitter"></i></a>{% endif %}
+					{% if options.instagram_link %}<a target="_blank" href="#"><i class="fab fa-instagram"></i></a>{% endif %}
+					{% if options.trip_advisor_link %}<a target="_blank" href="#"><i class="fab fa-tripadvisor"></i></a>{% endif %}
+					{% if options.yelp_link %}<a target="_blank" href="#"><i class="fab fa-yelp"></i></a>{% endif %}
+				</div>
+      </div>
+    </div>
+    <div class="nav-background"></div>
+  </div>
+</header>

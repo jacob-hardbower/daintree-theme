@@ -269,6 +269,21 @@ em {
     bottom: 10px;
     padding-left: 4px;
   }
+
+  .elementor-element-overlay ol,
+  .elementor-element-overlay ul {
+    &:not(.no-decoration) li::before {
+      content: "";
+      position: inherit;
+      left: inherit;
+      top: inherit;
+      color: inherit;
+    }
+    &:not(.no-decoration) {
+      padding-left: 0;
+    }
+  }
+
   ol,
   ul {
     font-size: inherit;

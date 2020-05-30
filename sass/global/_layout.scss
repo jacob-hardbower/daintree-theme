@@ -1,14 +1,13 @@
 $constrained-bp-tablet: '700px';
-$constrained-bp-desktop: '950px';
+$constrained-bp-desktop: '1025px';
 
 html {
-  background: $light;
+
 }
 
 body {
-  max-width: 1700px;
+  max-width: 1600px;
   margin: 0 auto;
-  box-shadow: 0 0 40px rgba(0,0,0,.2);
 }
 
 .constrained {
@@ -26,6 +25,59 @@ body {
     &.slim {
       padding: 0 50px;
     }
+  }
+}
+
+section.content-wrapper {
+  background: $light;
+  padding: 30px;
+}
+
+.elementor-page section.content-wrapper {
+  padding: 0;
+}
+
+@media screen and (min-width: $constrained-bp-desktop) {
+  body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  header.header {
+    width: 275px;
+    height: auto;
+    .constrained {
+      padding: 0;
+    }
+    .wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 30px;
+    }
+    .menu-button {
+      display: none;
+    }
+    .book-now-button {
+      position: relative;
+      left: auto;
+    }
+    .nav-contact-wrapper {
+
+    }
+    .nav-main ul li {
+      display: block;
+    }
+  }
+  section.content-wrapper {
+    width: calc(100% - 275px);
+    box-sizing: border-box;
+    border: 10px solid white;
+    border-left: none;
+    display: flex;
+    flex-direction: column;
+  }
+  .main-footer {
+    margin-top: auto;
   }
 }
 
