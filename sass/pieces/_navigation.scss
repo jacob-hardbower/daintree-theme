@@ -12,8 +12,9 @@
   padding-top: 0;
   padding-bottom: 20px;
   overflow: auto;
-  font-family: $headline-font;
-  font-weight: 700;
+  font-family: $secondary-headline-font;
+  font-weight: 600;
+	letter-spacing: .04em;
   transform: translateY(-20px);
 
 	.nav-main {
@@ -30,12 +31,13 @@
   ul a {
     display: block;
     padding: 10px 0;
+		color: $green;
     &:hover {
       // color: $accent;
     }
   }
   .menu-item-has-children {
-    margin-bottom: 10px;
+		margin-bottom: 10px;
     li a {
       font-size: 1.4rem;
       padding: 5px 0;
@@ -48,6 +50,24 @@
       }
     }
   }
+	.contact-header a {
+		font-size: 12px;
+		color: $green;
+		font-weight: 400;
+		text-decoration: none;
+	}
+	.phone-number {
+		margin-bottom: 8px;
+	}
+	.address {
+		margin-bottom: 35px;
+	}
+	.social-links a {
+    font-size: 26px;
+    margin-right: 11px;
+		color: $light-green;
+	}
+
 	@media screen and (min-width: 1025px) {
     text-align: left;
 		visibility: visible;
@@ -60,53 +80,66 @@
 	  right: auto;
 	  bottom: auto;
 	  overflow: visible;
-	  font-family: $headline-font;
-	  font-weight: 700;
 	  transform: translateY(0);
 		padding: 0;
 		margin: 0;
+		width: 100%;
+		.contact-header a {
+			color: $light;
+		}
+		.social-links a {
+			color: $light-tan;
+		}
 		.nav-main {
 			margin-top: 30px;
+			padding-bottom: 30px;
+			margin-bottom: 20px;
+			border-bottom: 1px solid $light-green;
 		}
 		ul > li {
 			display: inline-block;
 	    a {
 	      // color: $accent;
 	      text-decoration: none;
-	      font-size: 20px;
+	      font-size: 14px;
 	    }
 	  }
 	  ul a {
 	    display: inline-block;
 	    padding: 10px;
-			text-transform: uppercase;
 			letter-spacing: .03em;
+			color: $light-tan;
 	    &:hover {
 	      // color: $accent;
 	    }
 	  }
     .menu-item-has-children {
+			margin-bottom: 0;
 			position: relative;
 			&:after {
+				letter-spacing: 0;
+    		line-height: 3px;
 				cursor: pointer;
-				content: "\2304";
-				background: $light;
+				content: "+";
+				background: $pink;
 				position: absolute;
 				right: 0;
 				top: 0;
-				color: black;
+				color: $tan;
 				transition: transform .15s ease;
 				width: 30px;
 				height: 30px;
 				border-radius: 100%;
-				line-height: 20px;
 				display: flex;
 				align-items: center;
 				justify-content: center;
 			}
 			&.open {
 				&:after {
-					transform: rotate(180deg);
+					content: "-";
+					line-height: 1px;
+					letter-spacing: -2px;
+					transform: rotate(360deg);
 				}
 			}
 			> ul {
@@ -114,7 +147,6 @@
 				position: relative;
 				top: 100%;
 				left: 0;
-				background: white;
 				width: 100%;
 				text-align: left;
 				padding: 10px;
@@ -128,9 +160,10 @@
 				display: block;
 			}
 			li a {
-				font-size: .9em;
-				padding: 5px 0;
-				padding-left: 0;
+				font-size: .8em;
+				padding: 7px 0;
+				font-weight: 400;
+				padding-left: 10px;
 				position: relative;
 				display: block;
 				letter-spacing: .03em;

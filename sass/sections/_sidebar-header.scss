@@ -64,10 +64,9 @@ $header-breakpoint: 600px;
     margin-top: 20px;
     border-radius: 100%;
     background: white;
-    img {
-      width: 100%;
-      height: auto;
-    }
+    svg .st0 {
+			fill: $wine;
+		}
   }
 
   .nav-background {
@@ -96,6 +95,7 @@ $header-breakpoint: 600px;
     }
   }
 	@media screen and (min-width: 1025px) {
+		background: transparent;
 		.nav-background {
 			display: none;
 		}
@@ -107,10 +107,27 @@ $header-breakpoint: 600px;
 			margin-top: 0;
 			margin-left: auto;
 			margin-right: auto;
+			background: transparent;
+			svg .st0 {
+				fill: $light-tan;
+			}
 		}
 		.book-now-button {
 			width: 100%;
 			text-align: center;
 		}
+	}
+}
+
+body > .header {
+	z-index: 3;
+	position: relative;
+}
+
+@media screen and (min-width: 1025px) {
+	body > .header {
+		background: $wine;
+		box-shadow: 0 0 12px rgba(0,0,0,.35);
+		z-index: 2;
 	}
 }

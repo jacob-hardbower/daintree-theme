@@ -1,62 +1,85 @@
+$border-width: 2px;
+$button-color: $light-green;
+
 .btn {
   color: white;
-  padding: 18px 12px;
-  border: 1px solid $accent-dark;
-  background: $accent-dark;
+  padding: 10px 12px;
+  border: $border-width solid $button-color;
+  background: $button-color;
   transition: all 0.3s ease 0s;
-  line-height: 0;
-  font-weight: 700;
+  line-height: 20px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  font-size: 15px;
+  border-radius: 4px;
   display: inline-block;
-  font-family: $headline-font;
+  font-family: $secondary-headline-font;
+  text-transform: uppercase;
   text-decoration: none;
   background: transparent;
   -webkit-appearance: none;
+  box-sizing: border-box;
   cursor: pointer;
   @media screen and (min-width: 400px) {
-    padding: 20px;
+    padding: 10px 20px;
   }
-  @media screen and (min-width: 600px) {
-    padding: 25px;
-  }
+  // @media screen and (min-width: 600px) {
+  //   padding: 25px;
+  // }
 }
 
 .btn-dark {
   color: white;
-  border: 1px solid $accent-dark;
-  background: $accent-dark;
+  border: $border-width solid $button-color;
+  background: $button-color;
   &:hover {
     background: transparent;
-    color: $accent-dark;
+    color: $button-color;
   }
 }
 
 .btn-dark-reversed {
-  color: $accent-dark;
-  border: 1px solid $accent-dark;
+  color: $button-color;
+  border: $border-width solid $button-color;
   background: transparent;
   &:hover {
-    background: $accent-dark;
+    background: $button-color;
     color: white;
   }
 }
 
 .btn-accent {
   color: $black;
-  border: 1px solid $accent;
+  border: $border-width solid $accent;
   background: $accent;
   &:hover {
     color: white;
-    background: $accent-dark;
-    border: 1px solid $accent-dark;
+    background: $button-color;
+    border: $border-width solid $button-color;
   }
 }
 
 .btn-accent-reversed {
   color: #FFFFFF;
-  border: 1px solid #FFFFFF;
+  border: $border-width solid #FFFFFF;
   background: transparent;
   &:hover {
     color: $accent;
-    border: 1px solid $accent;
+    border: $border-width solid $accent;
   }
+}
+
+.btn-white {
+  color: $black;
+  border: $border-width solid white;
+  background: white;
+  &:hover {
+    color: white;
+    background: transparent;
+    border: $border-width solid white;
+  }
+}
+
+.btn-white-reversed {
+
 }

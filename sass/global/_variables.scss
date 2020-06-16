@@ -1,13 +1,19 @@
 // Typefaces
-$headline-font: 'Raleway'; //400, 700
-$body-font: 'Raleway'; //400, 400i, 700
+$headline-font: 'Vollkorn'; //400, 700
+$secondary-headline-font: 'Poppins'; // 400, 600, 700, 800
+$body-font: 'Muli'; //400, 400i, 800, 800i
 $handwritten: 'Nothing You Could Do';
 
 $wine: #60071a;
 $pink: #8f2152;
 $tan: #efd3b6;
+$light-tan: #fdf5ee;
 $light-pink: #eaa2a2;
 $green: #474a3f;
+$light-green: #89946c;
+$orange: #d8603a;
+$burnt: #ad5f27;
+$navy: #195493;
 
 // Colors
 $black: #333;
@@ -15,3 +21,24 @@ $accent: $green;
 $light: #f7f7f7;
 $accent-dark: $wine;
 $accent-medium: $pink;
+
+/*
+color: #60071a;
+color: #8f2152;
+color: #efd3b6;
+color: #eaa2a2;
+color: #474a3f;
+color: #d8603a;
+color: #ad5f27;
+color: #195493;
+
+background-color: #60071a;
+background-color: #8f2152;
+background-color: #efd3b6;
+background-color: #eaa2a2;
+background-color: #474a3f;
+background-color: #89946c;
+background-color: #d8603a;
+background-color: #ad5f27;
+background-color: #195493;
+*/

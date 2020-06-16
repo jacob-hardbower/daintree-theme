@@ -2,10 +2,11 @@ $constrained-bp-tablet: '700px';
 $constrained-bp-desktop: '1025px';
 
 html {
-
+  background: #420814;
 }
 
 body {
+  background: white;
   max-width: 1600px;
   margin: 0 auto;
 }
@@ -29,7 +30,6 @@ body {
 }
 
 section.content-wrapper {
-  background: $light;
   padding: 30px;
 }
 
@@ -71,7 +71,6 @@ section.content-wrapper {
   section.content-wrapper {
     width: calc(100% - 275px);
     box-sizing: border-box;
-    border: 10px solid white;
     border-left: none;
     display: flex;
     flex-direction: column;
