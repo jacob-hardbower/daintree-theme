@@ -3,6 +3,9 @@ jQuery( document ).ready( function( $ ) {
   // Stickykit - stick header to top of viewport
   $(".site-header").stick_in_parent();
 
+  $(".current-menu-item.menu-item-has-children").addClass("open");
+  $(".current-menu-item.menu-item-has-children").children("ul").slideToggle(150);
+
 
   $("#menu-button").on("click", function() {
     // Swap text in the menu button to close and back
