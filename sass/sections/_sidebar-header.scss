@@ -40,6 +40,15 @@ $header-breakpoint: 600px;
     display: none;
   }
 
+  &.nav-open {
+    .book-now-button {
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 100px;
+    }
+  }
+
   @media screen and (min-width: 485px) {
     .wrapper {
       justify-content: space-around;
@@ -52,6 +61,14 @@ $header-breakpoint: 600px;
     .menu-button {
       position: absolute;
       right: 20px;
+    }
+    &.nav-open {
+      .book-now-button {
+        display: block;
+        position: absolute;
+        right: auto;
+        top: auto; 
+      }
     }
   }
 
