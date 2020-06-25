@@ -13,7 +13,8 @@
       </nav>
 			<div class="contact-header">
         <p class="phone-number"><a title="Call DiVine Wine Tours of Virginia" class="tel-number" href="tel:+1-{{ options.phone_number|replace({'(' : '' , ')' : '' , ' ' : '-'}) }}">{{ options.phone_number }}</a></p>
-        <p class="address"><a title="Directions to DiVine Wine Tours of Virginia" target="_blank" href="{{ options.google_directions_link }}">{{ options.address_line_one }}<br />{{ options.address_line_two }}</a></p>
+        <!-- <p class="address"><a title="Directions to DiVine Wine Tours of Virginia" target="_blank" href="{{ options.google_directions_link }}">{{ options.address_line_one }}<br />{{ options.address_line_two }}</a></p> -->
+        <p class="address"><a href="/contact">{{ options.address_line_one }}</a></p>
 				<div class="social-links">
 					{% if options.facebook_link %}<a target="_blank" href="{{ options.facebook_link }}"><i class="fab fa-facebook-square"></i></a>{% endif %}
 					{% if options.twitter_link %}<a target="_blank" href="{{ options.twitter_link }}"><i class="fab fa-twitter"></i></a>{% endif %}

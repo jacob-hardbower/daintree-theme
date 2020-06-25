@@ -1,3 +1,10 @@
 <footer class="main-footer">
-	Copyright © {{ site.name }} {{"now"|date('Y')}} {{ options.footer_text }}
+	<div class="endorsement-logos">
+		{% for endorsement in options.endorsement_logos %}
+			<img class="endorsement-logo" src="{{ TimberImage(endorsement.logo).src }}" alt="{{ TimberImage(endorsement.logo).alt }}">
+		{% endfor %}
+	</div>
+	<div class="copyright-information">
+		Copyright © {{ site.name }} {{"now"|date('Y')}} {{ options.footer_text }}
+	</div>
 </footer>

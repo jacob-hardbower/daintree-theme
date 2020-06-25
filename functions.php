@@ -23,7 +23,7 @@ function add_to_context( $context ) {
 function my_load_scripts($hook) {
   wp_enqueue_script( 'stickykit', get_template_directory_uri() . '/static/js/sticky-kit.js', array(), 1.0, true );
   wp_enqueue_script( 'custom_js', get_template_directory_uri() . '/static/site.js', array('jquery', 'stickykit'), 1.0, true );
-  wp_register_style( 'my_css',    get_template_directory_uri() . '/style.css', false, 1.0 );
+  wp_register_style( 'my_css',    get_template_directory_uri() . '/style.css', false, 1.1 );
   wp_register_style( 'font_awesome',    get_template_directory_uri() . '/static/fonts/font-awesome/css/all.min.css', false, 1.0 );
   wp_enqueue_style ( 'my_css' );
   wp_enqueue_style ( 'font_awesome' );
@@ -33,3 +33,9 @@ add_action('wp_enqueue_scripts', 'my_load_scripts');
 
 // Add Options pages
 require "includes/acf-basic-fields.php";
+
+// Hide author oEmbed data to prevent Discord from showing it
+add_filter( 'oembed_response_data', function( $data ) {
+	unset( $data['author_name'], $data['author_url'] );
+	return $data;
+} );
